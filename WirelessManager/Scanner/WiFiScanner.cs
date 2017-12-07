@@ -34,6 +34,7 @@ namespace WirelessManager.Scanner
                     wifi.AuthenticationType = network.dot11DefaultAuthAlgorithm.ToString();
                     if (wifiList.Contains(wifi)) { continue; }
                     wifi.MAC = wlanIface.GetNetworkBssList()[macIndex].dot11Bssid.Select(b => b.ToString("x2")).Aggregate((cur, next) => cur + ':' + next);//.Trim((char)0);
+                    wifi.Connected = false;
                     wifiList.Add(wifi);
                     macIndex++;
                 }

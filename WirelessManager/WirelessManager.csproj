@@ -51,6 +51,7 @@
     <Compile Include="Scanner\NativeWiFi\Interop.cs" />
     <Compile Include="Scanner\NativeWiFi\WlanApi.cs" />
     <Compile Include="Scanner\WiFiScanner.cs" />
+    <Compile Include="Updater\DataUpdater.cs" />
     <Compile Include="WirelessManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -84,9 +85,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Updater\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -12,6 +12,7 @@ namespace WirelessManager.Network
         public string MAC { get; set; }
         public string ConnectionQuality { get; set; }
         public string AuthenticationType { get; set; }
+        public bool Connected { get; set; }
 
         public override bool Equals(object obj)
         {
