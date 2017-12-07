@@ -46,6 +46,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dispatcher\WiFiDispatcher.cs" />
+    <Compile Include="Network\WiFiNetwork.cs" />
+    <Compile Include="Scanner\NativeWiFi\Interop.cs" />
+    <Compile Include="Scanner\NativeWiFi\WlanApi.cs" />
+    <Compile Include="Scanner\WiFiScanner.cs" />
     <Compile Include="WirelessManagerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -78,6 +83,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Updater\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
