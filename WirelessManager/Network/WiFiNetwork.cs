@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using WirelessManager.Connector;
 
 namespace WirelessManager.Network
 {
@@ -13,6 +14,11 @@ namespace WirelessManager.Network
         public string ConnectionQuality { get; set; }
         public string AuthenticationType { get; set; }
         public bool Connected { get; set; }
+
+        public bool Connect(string password)
+        {
+            return WiFiConnector.GetInstance().Connect(this.Name, password);
+        }
 
         public override bool Equals(object obj)
         {

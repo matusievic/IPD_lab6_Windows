@@ -33,6 +33,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="SimpleWifi">
+      <HintPath>Connector\simplewifi\SimpleWifi.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -46,6 +49,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Connector\WiFiConnector.cs" />
     <Compile Include="Dispatcher\WiFiDispatcher.cs" />
     <Compile Include="Network\WiFiNetwork.cs" />
     <Compile Include="Scanner\NativeWiFi\Interop.cs" />
@@ -71,6 +75,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -85,7 +90,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\OPEN.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WEP.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\WPAPSK.xml" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

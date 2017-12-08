@@ -59,11 +59,13 @@
             this.QualityColumt,
             this.AuthenticationColumn,
             this.MACColumn});
+            this.NetworksGridView.Dock = System.Windows.Forms.DockStyle.Fill;
             this.NetworksGridView.Location = new System.Drawing.Point(3, 3);
             this.NetworksGridView.Name = "NetworksGridView";
             this.NetworksGridView.ReadOnly = true;
-            this.NetworksGridView.Size = new System.Drawing.Size(446, 170);
+            this.NetworksGridView.Size = new System.Drawing.Size(653, 271);
             this.NetworksGridView.TabIndex = 0;
+            this.NetworksGridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.NetworksGridView_CellContentClick);
             // 
             // NameColumt
             // 
@@ -101,7 +103,7 @@
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 133F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(452, 309);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(659, 410);
             this.tableLayoutPanel1.TabIndex = 1;
             // 
             // tableLayoutPanel2
@@ -112,11 +114,11 @@
             this.tableLayoutPanel2.Controls.Add(this.tableLayoutPanel3, 0, 0);
             this.tableLayoutPanel2.Controls.Add(this.connectedLabel, 1, 0);
             this.tableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 179);
+            this.tableLayoutPanel2.Location = new System.Drawing.Point(3, 280);
             this.tableLayoutPanel2.Name = "tableLayoutPanel2";
             this.tableLayoutPanel2.RowCount = 1;
             this.tableLayoutPanel2.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel2.Size = new System.Drawing.Size(446, 127);
+            this.tableLayoutPanel2.Size = new System.Drawing.Size(653, 127);
             this.tableLayoutPanel2.TabIndex = 3;
             // 
             // tableLayoutPanel3
@@ -133,15 +135,18 @@
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 56.25F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 43.75F));
             this.tableLayoutPanel3.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 56F));
-            this.tableLayoutPanel3.Size = new System.Drawing.Size(217, 121);
+            this.tableLayoutPanel3.Size = new System.Drawing.Size(320, 121);
             this.tableLayoutPanel3.TabIndex = 0;
             // 
             // passwordTextBox
             // 
+            this.passwordTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.passwordTextBox.Location = new System.Drawing.Point(3, 39);
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.PasswordChar = '*';
-            this.passwordTextBox.Size = new System.Drawing.Size(211, 20);
+            this.passwordTextBox.Size = new System.Drawing.Size(314, 20);
             this.passwordTextBox.TabIndex = 1;
             // 
             // passwordLabel
@@ -152,7 +157,7 @@
             this.passwordLabel.AutoSize = true;
             this.passwordLabel.Location = new System.Drawing.Point(3, 0);
             this.passwordLabel.Name = "passwordLabel";
-            this.passwordLabel.Size = new System.Drawing.Size(211, 36);
+            this.passwordLabel.Size = new System.Drawing.Size(314, 36);
             this.passwordLabel.TabIndex = 2;
             this.passwordLabel.Text = "Password";
             this.passwordLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -160,20 +165,21 @@
             // connectButton
             // 
             this.connectButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.connectButton.Location = new System.Drawing.Point(71, 67);
+            this.connectButton.Location = new System.Drawing.Point(122, 67);
             this.connectButton.Name = "connectButton";
             this.connectButton.Size = new System.Drawing.Size(75, 23);
             this.connectButton.TabIndex = 3;
             this.connectButton.Text = "Connect";
             this.connectButton.UseVisualStyleBackColor = true;
+            this.connectButton.Click += new System.EventHandler(this.connectButton_Click);
             // 
             // connectedLabel
             // 
             this.connectedLabel.AutoSize = true;
             this.connectedLabel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.connectedLabel.Location = new System.Drawing.Point(226, 0);
+            this.connectedLabel.Location = new System.Drawing.Point(329, 0);
             this.connectedLabel.Name = "connectedLabel";
-            this.connectedLabel.Size = new System.Drawing.Size(217, 127);
+            this.connectedLabel.Size = new System.Drawing.Size(321, 127);
             this.connectedLabel.TabIndex = 1;
             this.connectedLabel.Text = "...";
             this.connectedLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -182,7 +188,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(452, 309);
+            this.ClientSize = new System.Drawing.Size(659, 410);
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "WirelessManagerForm";
             this.Text = "Wireless Manager";
