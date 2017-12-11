@@ -17,7 +17,7 @@ namespace WirelessManager.Network
 
         public bool Connect(string password)
         {
-            return WiFiConnector.GetInstance().Connect(this.Name, password);
+            return new WiFiConnector().Connect(this.Name, password);
         }
 
         public override bool Equals(object obj)

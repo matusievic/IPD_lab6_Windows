@@ -8,11 +8,8 @@ using SimpleWifi;
 
 namespace WirelessManager.Connector
 {
-    sealed class WiFiConnector
+    class WiFiConnector
     {
-        private static WiFiConnector _instance;
-        public static WiFiConnector GetInstance() { return _instance ?? (_instance = new WiFiConnector()); }
-
         public bool Connect(string name, string password)
         {
             var wifi = new Wifi();

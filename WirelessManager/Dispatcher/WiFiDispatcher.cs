@@ -8,15 +8,10 @@ using WirelessManager.Scanner;
 
 namespace WirelessManager.Dispatcher
 {
-    sealed class WiFiDispatcher
+    class WiFiDispatcher
     {
-        private static WiFiDispatcher _instance;
-        private WiFiDispatcher() { Update(); }
-        private WiFiScanner scanner = WiFiScanner.GetInstance();
-        public static WiFiDispatcher GetInstance()
-        {
-            return _instance ?? (_instance = new WiFiDispatcher());
-        }
+        public WiFiDispatcher() { Update(); }
+        private WiFiScanner scanner = new WiFiScanner();
         public List<WiFiNetwork> Networks { get; private set; }
         public List<WiFiNetwork> Update()
         {

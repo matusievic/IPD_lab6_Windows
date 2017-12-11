@@ -8,15 +8,8 @@ using NativeWifi;
 
 namespace WirelessManager.Scanner
 {
-    sealed class WiFiScanner
+    class WiFiScanner
     {
-        private static WiFiScanner _instance;
-        private WiFiScanner() { }
-        public static WiFiScanner GetInstance()
-        {
-            return _instance ?? (_instance = new WiFiScanner());
-        }
-
         public List<WiFiNetwork> Networks { get; private set; }
         public List<WiFiNetwork> UpdateNetworks()
         {

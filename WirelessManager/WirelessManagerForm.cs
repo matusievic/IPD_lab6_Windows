@@ -14,7 +14,7 @@ namespace WirelessManager
 {
     public partial class WirelessManagerForm : Form
     {
-        private WiFiDispatcher _dispatcher = WiFiDispatcher.GetInstance();
+        private WiFiDispatcher _dispatcher = new WiFiDispatcher();
         private DataUpdater _updater;
         public WirelessManagerForm()
         {
