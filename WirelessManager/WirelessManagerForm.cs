@@ -59,10 +59,16 @@ namespace WirelessManager
                 try
                 {
                     if (currentNetwork.Connect(passwordTextBox.Text))
-                    MessageBox.Show(this, "You've connected to the network", "OK - Wireless Manager");
-                    currentNetwork.Connected = true;
-                    foreach (var n in networks) { if (n != currentNetwork) { n.Connected = false; } }
-                    this.UpdateButtons();
+                    {
+                        MessageBox.Show(this, "You've connected to the network", "OK - Wireless Manager");
+                        currentNetwork.Connected = true;
+                        foreach (var n in networks) { if (n != currentNetwork) { n.Connected = false; } }
+                        this.UpdateButtons();
+                    }
+                    else
+                    {
+                        MessageBox.Show(this, "Cannot connect to the network", "Error - Wireless Manager");
+                    }
                 }
                 catch { MessageBox.Show(this, "Cannot connect to the network", "Error - Wireless Manager"); }
             }
